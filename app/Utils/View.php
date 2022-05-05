@@ -28,13 +28,13 @@ class View
     public static function get($view, $vars = [])
     {
         if(str_replace(self::BASEURL, '', $_SERVER['REQUEST_URI']) === $view){
-            
+
             $contentView = self::getContentView($view);
             $keys = array_keys($vars);
             $keys = array_map(function($item){
                 return '{{'.$item.'}}';
             },$keys);
-            
+
             return str_replace($keys, array_values($vars), $contentView);
         }
     }

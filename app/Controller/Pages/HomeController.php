@@ -6,11 +6,9 @@ class HomeController
 {
     public static function index()
     {
-        $fields = [
+        return [
             "name" => "Supernova Digital",
             "description" => "A Mais nova Agência digital"
         ];
-
-        return $fields;
     }
 }
