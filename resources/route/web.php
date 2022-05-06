@@ -1,7 +1,6 @@
 <?php
 
-use App\Utils\View;
+use App\Utils\Route;
+use App\Controller\HomeController;
 
-use App\Controller\Pages\HomeController;
-
-echo View::get('/home', HomeController::index());
+Route::get('/', HomeController::index());
