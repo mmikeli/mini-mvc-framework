@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-class HomeController
+class ContatoController
 {
   public static function index($fields, $request)
   {
@@ -11,8 +11,9 @@ class HomeController
       return false;
     }
     
-    print_r('HomeController Executando');
+    print_r('ContatoController Executando');
     echo '<br>';
     return true;
+    
   }
 }

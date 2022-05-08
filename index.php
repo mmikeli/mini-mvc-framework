@@ -1,11 +1,12 @@
 <?php
 
-/**
- * Autoload para namespace das classes que justas formar o nosso MVC
- */
-require __DIR__."/vendor/autoload.php";
+require __DIR__.'/vendor/autoload.php';
 
-/**
- * Gerenciamento das rotas de acordo com a URL solicitada
- */
-require __DIR__."/resources/route/web.php";
+require __DIR__.'/functions/function.php';
+
+$request = [];
+const BASE_URL = '/mini-mvc-framework';
+
+require __DIR__.'/app/core/core.php';
+
+require __DIR__.'/app/resource/web.php';
