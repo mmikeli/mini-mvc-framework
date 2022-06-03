@@ -2,7 +2,7 @@
 
 function error_page($error_code)
 {
-  return '../public/error_pages/'.$error_code.'.php';
+  return 'public/error_pages/'.$error_code.'.php';
 }
 
 function check_request($fields, $request)

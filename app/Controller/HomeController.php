@@ -6,13 +6,9 @@ class HomeController
 {
   public static function index($fields, $request)
   {
-    
     if(!check_request($fields, $request)){
       return false;
     }
-    
-    print_r('HomeController Executando');
-    echo '<br>';
-    return true;
+    return ['home', ['page_title' => 'Meu sitezão', 'ano_rodape' => '2022', 'header' => 'Menu']];
   }
 }
