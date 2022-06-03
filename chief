@@ -1,0 +1,31 @@
+<?php
+array_shift($argv); 
+
+if($argv[0] === 'create:Controller'){
+  $name = $argv[1];
+  $modelo =  $argv[2] === '--pop' ? 'ControllerFull' : 'Controller';
+  $modeloController = str_replace('ExampleController', $name, file_get_contents('app/Command/Modelos/'.$modelo));
+  echo 'Criando novo Controller: '.$name."...\r\n";
+  if(file_put_contents('app/Controller/'.$name.'.php', $modeloController)){
+    echo 'success';
+  }else{
+    if(file_exists('app/Controller/'.$name.'.php')){
+      unlink('app/Controller/'.$name.'.php');
+    }
+    echo 'Error';
+  }
+}
+
+if($argv[0] === 'create:Model'){
+  $name = $argv[1];
+  $modeloModel = str_replace('ExampleModel', $name, file_get_contents('app/Command/Modelos/Model'));
+  echo 'Criando novo Model: '.$name."...\r\n";
+  if(file_put_contents('app/Model/'.$name.'.php', $modeloModel)){
+    echo 'success';
+  }else{
+    if(file_exists('app/Model/'.$name.'.php')){
+      unlink('app/Model/'.$name.'.php');
+    }
+    echo 'Error';
+  }
+}

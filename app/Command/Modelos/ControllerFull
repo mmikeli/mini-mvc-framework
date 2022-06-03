@@ -1,0 +1,97 @@
+<?php
+
+namespace App\Controller;
+
+class ExampleController
+{
+  /**
+   * Método responsável por listar
+   * @param Array $fields
+   * @param Request $request
+   * @return Array
+   */
+  public static function index($fields, $request)
+  {
+    if(!check_request($fields, $request)){
+      return false;
+    }
+  }
+  
+  /**
+   * Método responsável por abrir o Cadastro
+   * @param Array $fields
+   * @param Request $request
+   * @return Array
+   */
+  public static function create($fields, $request)
+  {
+    if(!check_request($fields, $request)){
+      return false;
+    }
+  }
+  
+  /**
+   * Método responsável por Cadastrar
+   * @param Array $fields
+   * @param Request $request
+   * @return Array
+   */
+  public static function store($fields, $request)
+  {
+    if(!check_request($fields, $request)){
+      return false;
+    }
+  }
+  
+  /**
+   * Método responsável por Mostrar um unico
+   * @param Array $fields
+   * @param Request $request
+   * @return Array
+   */
+  public static function show($fields, $request)
+  {
+    if(!check_request($fields, $request)){
+      return false;
+    }
+  }
+  
+  /**
+   * Método responsável por abrir a Edição
+   * @param Array $fields
+   * @param Request $request
+   * @return Array
+   */
+  public static function edit($fields, $request)
+  {
+    if(!check_request($fields, $request)){
+      return false;
+    }
+  }
+  
+  /**
+   * Método responsável por Atualizar
+   * @param Array $fields
+   * @param Request $request
+   * @return Array
+   */
+  public static function update($fields, $request)
+  {
+    if(!check_request($fields, $request)){
+      return false;
+    }
+  }
+  
+  /**
+   * Método responsável por Deletar
+   * @param fields Request Method e Path
+   * @param request Request Object
+   * @return HttpCode
+   */
+  public static function destroy($fields, $request)
+  {
+    if(!check_request($fields, $request)){
+      return false;
+    }
+  }
+}

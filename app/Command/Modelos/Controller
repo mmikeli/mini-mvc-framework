@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Controller;
+
+class ExampleController
+{
+  /**
+   * Método responsável por listar
+   * @param Array $fields
+   * @param Request $request
+   * @return Array
+   */
+  public static function index($fields, $request)
+  {
+    if(!check_request($fields, $request)){
+      return false;
+    }
+  }
+}
